@@ -73,4 +73,4 @@ r10k::sources:
     remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_modules'
   hiera:
     basedir: '/etc/puppet/hiera'
-    remote: 'https://github.comUMD-HEPCMS/umd_hepcms_hiera_data'
+    remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_hiera_data'
