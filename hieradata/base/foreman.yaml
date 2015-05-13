@@ -1,0 +1,8 @@
+---
+classes:
+  - role::foreman_all_in_one
+foreman_proxy::dhcp: true
+foreman_proxy::dns: true
+foreman_proxy::puppetca: true
+foreman_proxy::tftp: true
+#mysql::server::root_password: ''

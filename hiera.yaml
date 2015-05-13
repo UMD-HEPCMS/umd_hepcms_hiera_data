@@ -1,0 +1,12 @@
+---
+:backends:
+  - yaml
+:logger: console
+:hierarchy:
+  - "fqdn/%{::fqdn}"
+  - "%{::hostgroup}"
+  - "virtual/%{::virtual}"
+  - common
+  - site
+:yaml:
+   :datadir: "/etc/puppet/hiera/%{::environment}/hieradata"

@@ -1,0 +1,4 @@
+---
+#foreman_host: ''
+foreman_repo_version: '1.8'
+#puppetmaster: ''

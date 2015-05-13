@@ -1,0 +1,55 @@
+---
+#foreman::admin_email: ''
+#foreman::admin_first_name: ''
+#foreman::admin_last_name: ''
+#foreman::admin_password: ''
+#foreman::admin_username: ''
+foreman::configure_epel_repo: false
+foreman::configure_scl_repo: false
+foreman::db_database: 'foreman'
+foreman::db_manage: true
+#foreman::db_password: ''
+foreman::db_type: 'mysql'
+foreman::db_username: 'foreman'
+foreman::foreman_url: "https://%{hiera('foreman_host')}"
+foreman::locations_enabled: false
+foreman::oauth_active: true
+#foreman::oauth_consumer_key: ''
+#foreman::oauth_consumer_secret: ''
+foreman::oauth_map_users: false
+foreman::organizations_enabled: false
+foreman::repo: "%{hiera('foreman_repo_version')}"
+foreman::ssl: true
+foreman::unattended: true
+foreman_proxy::bmc: false
+foreman_proxy::bmc_default_provider: 'freeipmi'
+foreman_proxy::dhcp: false
+foreman_proxy::dhcp_managed: false
+foreman_proxy::dns: false
+foreman_proxy::dns_managed: false
+foreman_proxy::foreman_base_url: "https://%{hiera('foreman_host')}"
+foreman_proxy::manage_sudoersd: false
+foreman_proxy::register_in_foreman: false
+foreman_proxy::repo: "%{hiera('foreman_repo_version')}"
+foreman_proxy::puppetca: false
+foreman_proxy::puppetrun: false
+#TODO Uncomment next 2 items if mcollective is used
+#foreman_proxy::puppetrun_provider: 'mcollective'
+#foreman_proxy::puppet_user: 'foreman-proxy'
+foreman_proxy::puppet_url: "https://%{hiera('puppetmaster')}:8140"
+foreman_proxy::ssl: true
+foreman_proxy::tftp: false
+foreman_proxy::trusted_hosts:
+  - "%{hiera('foreman_host')}"
+mysql::server::remove_default_accounts: true
+mysql::server::backup::backupcompress: true
+mysql::server::backup::backupdir: '/opt/mysql_backups'
+#mysql::server::backup::backuppassword: ''
+mysql::server::backup::backuprotate: 7
+mysql::server::backup::backupuser: 'backup-user'
+mysql::server::backup::delete_before_dump: true
+mysql::server::backup::ensure: present
+mysql::server::backup::file_per_database: true
+mysql::server::backup::time:
+  - '23'
+  - '5'
