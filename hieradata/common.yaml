@@ -8,7 +8,6 @@ foreman::configure_epel_repo: false
 foreman::configure_scl_repo: false
 foreman::db_database: 'foreman'
 foreman::db_manage: true
-#foreman::db_password: ''
 foreman::db_type: 'mysql'
 foreman::db_username: 'foreman'
 foreman::foreman_url: "https://%{hiera('foreman_host')}"

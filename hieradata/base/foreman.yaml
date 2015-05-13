@@ -1,6 +1,16 @@
 ---
 classes:
   - role::foreman_all_in_one
+foreman::db_password: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAEpKrHawyUeJ0H5Sub5jhqsD9cKIlClCMH2it
+    ly7w3iemSOKCTrV+uC/F8Rr2sbbPb8nAPO8S9GMEdPDvo9AZTTD78SSMjtiO
+    E7p4dlWnmZf73f3pvl/eJzWnv6DsKAkWONrAQRIE/8y53yXmCTy06uAMxLRp
+    ZPar+nVwxFaQgBqzSj/aShdfL3AJc5aI/Qrt2uX5sQ3i1W4RixjCCndlvYkX
+    u7uqBXUggL6BYoabpd0oPz4p42SkBUOlAwgkMPDZjmCTKuJf6jyddQU3dI05
+    umFXYjEDNujwrX/sjYTmMeHlTu9kUCZmjnzfVKfuwkocR6PAww+xQux94W6a
+    4ChEzDBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAGxzAJ7jNVDgq73ysM
+    Umv+gCCQFxoiU0+zBtVvXyl7DHhsjYQSYSH5m8bycGZjw2bIJA==]
 foreman_proxy::dhcp: true
 foreman_proxy::dns: true
 foreman_proxy::puppetca: true
