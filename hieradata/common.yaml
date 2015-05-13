@@ -53,3 +53,25 @@ mysql::server::backup::file_per_database: true
 mysql::server::backup::time:
   - '23'
   - '5'
+puppet::agent: true
+puppet::classfile: '$statedir/classes.txt'
+puppet::cron_cmd: '/usr/bin/env puppet agent --config /etc/puppet/puppet.conf --onetime --no-daemonize --noop'
+puppet::hiera_config: '/etc/puppet/hiera/production/hiera.yaml'
+puppet::puppetmaster: "%{hiera('puppetmaster')}"
+puppet::runinterval: '3600'
+puppet::runmode: 'cron'
+puppet::server: false
+r10k::cachedir: '/var/cache/r10k'
+r10k::configfile: '/etc/r10k.yaml'
+r10k::manage_modulepath: false
+r10k::manage_ruby_dependency: 'include'
+#TODO set to true if mcollective is used
+r10k::mcollective: false
+r10k::purgedirs: '/etc/puppet/environments'
+r10k::sources:
+  puppet:
+    basedir: '/etc/puppet/environments'
+    remote: 'git@github.com:UMD-HEPCMS/umd_hepcms_puppet_modules.git'
+  hiera:
+    basedir: '/etc/puppet/hiera'
+    remote: 'git@github.com:UMD-HEPCMS/umd_hepcms_hiera_data.git'

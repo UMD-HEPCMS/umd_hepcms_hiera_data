@@ -6,3 +6,12 @@ foreman_proxy::dns: true
 foreman_proxy::puppetca: true
 foreman_proxy::tftp: true
 #mysql::server::root_password: ''
+#puppet::dns_alt_names:
+#  - ''
+#  - ''
+puppet::server: true
+puppet::server_certname: "%{hiera('puppetmaster')}"
+puppet::server_common_modules_path:
+  - '/etc/puppet/modules'
+  - '/usr/share/puppet/modules'
+puppet::server_implementation: 'puppetserver'
