@@ -71,7 +71,7 @@ r10k::purgedirs: '/etc/puppet/environments'
 r10k::sources:
   puppet:
     basedir: '/etc/puppet/environments'
-    remote: 'git@github.com:UMD-HEPCMS/umd_hepcms_puppet_modules.git'
+    remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_modules'
   hiera:
     basedir: '/etc/puppet/hiera'
-    remote: 'git@github.com:UMD-HEPCMS/umd_hepcms_hiera_data.git'
+    remote: 'https://github.comUMD-HEPCMS/umd_hepcms_hiera_data'
