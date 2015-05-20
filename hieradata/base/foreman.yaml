@@ -3,23 +3,34 @@ classes:
   - role::foreman_all_in_one
 foreman::db_password: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
-    DQYJKoZIhvcNAQEBBQAEggEAEpKrHawyUeJ0H5Sub5jhqsD9cKIlClCMH2it
-    ly7w3iemSOKCTrV+uC/F8Rr2sbbPb8nAPO8S9GMEdPDvo9AZTTD78SSMjtiO
-    E7p4dlWnmZf73f3pvl/eJzWnv6DsKAkWONrAQRIE/8y53yXmCTy06uAMxLRp
-    ZPar+nVwxFaQgBqzSj/aShdfL3AJc5aI/Qrt2uX5sQ3i1W4RixjCCndlvYkX
-    u7uqBXUggL6BYoabpd0oPz4p42SkBUOlAwgkMPDZjmCTKuJf6jyddQU3dI05
-    umFXYjEDNujwrX/sjYTmMeHlTu9kUCZmjnzfVKfuwkocR6PAww+xQux94W6a
-    4ChEzDBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAGxzAJ7jNVDgq73ysM
-    Umv+gCCQFxoiU0+zBtVvXyl7DHhsjYQSYSH5m8bycGZjw2bIJA==]
+    DQYJKoZIhvcNAQEBBQAEggEAomtrFJolrFMMFCtgHk2eV7NwgUTkEBGIPng7
+    jmmhlLrd56pN8eiN87eALm7ucp20IlZKp+vlvMOZQ0ACAHrNNzWakFAHzy6j
+    Xkij8racGVJF8ibZ1H4DRhYXrYlLCvDN4IVawKTSh/pZYxVUI+PRSgbuzkDz
+    9a43xla3WBbebLs5NgbTA789cs1tbXhoj8+FvR4toOo5eepKfN27RjK9cNKj
+    VdxBEzSJzSjCNokneCBC5n7aYK9f7BOV4Mb3L1h+ZUB5yokN7MpSKU4fUtBS
+    ZMN7h66vTaNp7CjD3UlPsH0dLpQYkM8JI4vM2qvp5amvlg6GUh2Q+oQtpsVd
+    MLuYjTBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBIJfqrn+8E6+DBe9+3
+    OGZagCA/BAETRAhXpncjI7V+FcbDz1xKKzRNEcGE6Lj5Sr1bvQ==]
 foreman_proxy::dhcp: true
 foreman_proxy::dns: true
 foreman_proxy::puppetca: true
 foreman_proxy::puppetrun: true
 foreman_proxy::tftp: true
-#mysql::server::root_password: ''
-#puppet::dns_alt_names:
-#  - ''
-#  - ''
+mysql::server::root_password: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAR6dnXKd6EXMdMuRfL5ePYoCk+l/NgaWt0CTj
+    6kf1/fZOmWOFym4aDfhRK/NXu/rfZqOGaJ/AN2f5GwZDTrynV3GFRvgSsvi1
+    vexhbg34UzWhMTkLBYRLVXjbWhRoZ/zhUtE4V28gFAsTM/ppMBaGN2Mv2OVg
+    tVjEbm/CRIfx/j5UxNiOH0dnbKbnPF4FrCN74YKfdQW2K33IhPstKA2eZVD1
+    0WH/HI2sbqIZl1u48IqIsec+I+k3FWWNm+NKD2b0vn1Au3x4bdUF1gq7hEQH
+    9GYFUs9+YKlPIQ24B/g4ugR2XmNzB3Yam9xtKAaK/XSYHknOHYFa8byms6Zo
+    q2haRTBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAanjgiQCAQ3cFnifyd
+    DLPtgCAwHfANeyO0pClJFLQQj1YrXkAk1FqgH+R/dXO67j7rMA==]
+puppet::dns_alt_names:
+  - 'hepcms-puppet.umd.edu'
+  - 'hepcms-puppet.local'
+  - 'hepcms-foreman.umd.edu'
+  - 'hepcms-foreman.local'
 puppet::server: true
 puppet::server_certname: "%{hiera('puppetmaster')}"
 puppet::server_common_modules_path:

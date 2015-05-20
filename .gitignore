@@ -6,3 +6,4 @@ spec/fixtures/modules/
 .vagrant/
 .bundle/
 coverage/
+keys/

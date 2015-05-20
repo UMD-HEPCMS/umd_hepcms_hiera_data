@@ -1,4 +1,4 @@
 ---
-#foreman_host: ''
+foreman_host: 'hepcms-foreman.umd.edu'
 foreman_repo_version: '1.8'
-#puppetmaster: ''
+puppetmaster: 'hepcms-puppet.umd.edu'
