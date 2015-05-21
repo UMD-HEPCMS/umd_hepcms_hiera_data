@@ -1,9 +1,4 @@
 ---
-#foreman::admin_email: ''
-#foreman::admin_first_name: ''
-#foreman::admin_last_name: ''
-#foreman::admin_password: ''
-#foreman::admin_username: ''
 foreman::configure_epel_repo: false
 foreman::configure_scl_repo: false
 foreman::db_database: 'foreman'
