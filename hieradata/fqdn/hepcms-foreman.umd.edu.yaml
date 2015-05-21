@@ -11,6 +11,28 @@ foreman::db_password: >
     ZMN7h66vTaNp7CjD3UlPsH0dLpQYkM8JI4vM2qvp5amvlg6GUh2Q+oQtpsVd
     MLuYjTBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBIJfqrn+8E6+DBe9+3
     OGZagCA/BAETRAhXpncjI7V+FcbDz1xKKzRNEcGE6Lj5Sr1bvQ==]
+foreman::oauth_consumer_key: >
+    ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAhKCS3qoljbnlDuVDXcIa6Nkv5spQ4cLIOt1B
+    g6xW2koTDvXCVY9sODop44qFvyNm2EyN3ExMhbwKWDdk0nt8sIR2okEEbOH7
+    qIjuZLX+qMN/wcUsD+6vYwaaQ+ywhOfoSdm1zZCXQKRH5Lww9MOyG7Ih13yc
+    kaUA57RB+xbpGQhNGBtRBF7pHmI3ZnpeA0lT1PLtVBsmASOgYSnYbEsjycSw
+    gUaIpj41xxRMALYe/G3kWVjSv+aC9eUa11GAIH84qAQ7dHUz4UvRkP7yaQvX
+    rmZ7zBWEk7fQfCZFoCehBZ6+GUVh2rpyl/0VXp2e9VlQ76Og3IgZzg0BjhOa
+    DaqY2TBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDdRPWyad8/qEwNoOnU
+    Up2RgDABb84Mkak49Et1NQoV/T344j3QibHzGJ7jaH6RxyE94mecJJ+Sdr/C
+    tpothF6hpnM=]
+foreman::oauth_consumer_secret: >
+    ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEArf1Yr7qoBr+oXurH7OqI88W2mYneTvBW3IE4
+    YJXjNRLVa317ACdoZURYDLtaayrkBhpR1yyIOUZSFMNTWygd/Ox1LYJvhxLW
+    V1OKFKnSnCR+0Lv5P0AOX+ERPrE2Vjs1W6rIf/raxfB0v1eMhPziGvlvF4jH
+    MGlMckLhB1S15A/VTW8beR/epZfdE6IByb90H6tdKFLhfEbBMvKXewKC9ufY
+    XRaMBeGunWCqCQb7l43rZMBZjP2GANq9Yrx0rt6dzsTzOdphh/fXi8E+1e9A
+    Q20CuPsVGZRt/u+5TTfkNZozqgE1aPHB15XgxkxbwyUmDH50ophOaj37d6uo
+    XwrhRTBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBh3Cygq/uOIYUv7GhS
+    /MQqgDDzBGt+GU+y237jN5tO5IM1B6p/CZ1vRxjR4g1gv8UqFvW7H6kTMSEV
+    GiBnEaRZmiY=]
 foreman_proxy::dhcp: true
 foreman_proxy::dns: true
 foreman_proxy::puppetca: true

@@ -8,8 +8,6 @@ foreman::db_username: 'foreman'
 foreman::foreman_url: "https://%{hiera('foreman_host')}"
 foreman::locations_enabled: false
 foreman::oauth_active: true
-#foreman::oauth_consumer_key: ''
-#foreman::oauth_consumer_secret: ''
 foreman::oauth_map_users: false
 foreman::organizations_enabled: false
 foreman::repo: "%{hiera('foreman_repo_version')}"
@@ -38,7 +36,16 @@ foreman_proxy::trusted_hosts:
 mysql::server::remove_default_accounts: true
 mysql::server::backup::backupcompress: true
 mysql::server::backup::backupdir: '/opt/mysql_backups'
-#mysql::server::backup::backuppassword: ''
+mysql::server::backup::backuppassword: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAeUEtav7+LStK6MdPkF8q0Fi8CH/eSoZRJ85U
+    TqfaKsahXHjLhe2Xd8qY/ZfuijDV80ndQ0ffdq/pllAPVajtdhzDKAYXUCNl
+    Qn/y5ts8010vK0ijHhYQ6GRI+slYASHQJ2xub7WEK+ug7zfpMlMyrFoOVWBJ
+    F5dlFsXtouromckj/7XVlWCZGhmnUhmimLtqjjSiSF5lZ4t8AO0/sqEJFNXw
+    Cdir+ubRen0ibVKGgXt/vq3K6MuUNza4t1I16andZY3yXCp5C5z8NlUv0pkf
+    GhNfaqma83S8+vNzvujSWJIo2ItFvFA6FlcS9BujtAkE0pGtcDVUjYCd63iC
+    PB2a/TBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD2dqdsGbrnD0RzR25w
+    uH3tgCChNodGWT1KJ+IbdkkdHPJfsfi0lf/A0yE0HfMQmg+7Hw==]
 mysql::server::backup::backuprotate: 7
 mysql::server::backup::backupuser: 'backup-user'
 mysql::server::backup::delete_before_dump: true
@@ -48,6 +55,11 @@ mysql::server::backup::time:
   - '23'
   - '5'
 nfs::manage_idmapd: false
+# TODO : Possibly update to use UMD servers
+ntp::servers:
+  - '0.centos.pool.ntp.org'
+  - '1.centos.pool.ntp.org'
+  - '2.centos.pool.ntp.org'
 puppet::agent: true
 puppet::classfile: '$statedir/classes.txt'
 puppet::cron_cmd: '/usr/bin/env puppet agent --config /etc/puppet/puppet.conf --onetime --no-daemonize --noop'
