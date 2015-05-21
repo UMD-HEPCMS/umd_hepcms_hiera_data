@@ -1,0 +1,31 @@
+---
+classes:
+  - role::ovirt_all_in_one
+nfs::exports:
+  '/opt/ovirt/iso':
+    - host: '127.0.0.1'
+      options: 'rw,insecure,all_squash,no_subtree_check,anonuid=36,anongid=36'
+  '/opt/ovirt/import_export':
+    - host: '127.0.0.1'
+      options: 'rw,insecure,all_squash,no_subtree_check,anonuid=36,anongid=36'
+ovirt::engine::admin_password: >
+    ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAXfVKMVe3z42cVLJjegqvMnwcbhWRjIO4oaqG
+    G/tCy4e3rI2bWTiJF6CQafeJBF7vpMiLLBlT1C0graEvlwZfkIwNV5rmMsax
+    1NCeG/gaIxA0cNL247EE+Fsn3bUEpMnkWvJPUPzMHJ6pbRTpNt1nSlt/sC4a
+    3KJRBdeC4BVz46R4EmyqYbVcbDlm6DCWQZAZ7O5RHmIKrhVzb+OFzexfNxPn
+    9JdV1/GbeeaO1D7fwTtW9g7oSGg7dgQHPxlV24QndXl4tdk+ow+7FBT+Zkf9
+    qj9IcK0XOq6eXrtDvNWpee+F8UNqo04sAe6i8JCMPANXsLdc+8oqLnnoQP1Y
+    6ukODDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDiTyvgK+FvFlHt5zl4
+    74bSgBALb0Qao0ke2fjbITeaLrK6]
+ovirt::engine::db_password: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAG20hqYbl+e3Ha3eO1/f04Ljc2ZYU6wnO6sf8
+    9OXf7BzV8NYFjzZccKwV0tdPqhuOY+R6RJdaWkPTfQU5Af40QfkhSlF+XfnZ
+    r59JZGpltT/g9uZIBLAuyEvcm5X0V3e8GwglH5U5RvLPDu3lFfHcU+LmCKSr
+    QnGACzuD82UeZDASPITUsp6UbJQZshJdyHmXEFEKr3bPDg/uxi77TJbZVrvp
+    AXZOUBODqDH9R6m3QHfJJ60bEY+tTLrlHfWgfGKNdpNO4SQdgNfvO5oxwwiK
+    XfGXeUGqJH5h6ESHw0oW5OwMGcZB9xspyxCqiIHmZuiPQS0CAte7vOKrLOlq
+    lGgZmTBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDLznwiK6bgH/h5jvZN
+    nYa+gCCes6rKxZ7Y5GDPiFKV2c0N4+QabkAOFNPwOJYx4B5N2w==]
+ovirt::engine::setup_fqdn: 'hepcms-ovirt.umd.edu'
