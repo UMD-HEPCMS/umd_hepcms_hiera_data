@@ -1,0 +1,5 @@
+---
+classes:
+  - role::headnode
+internal_interface: 'em3'
+public_interface: 'em2'
