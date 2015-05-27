@@ -1,4 +1,12 @@
 ---
+domain: 'umd.edu'
+external_domain: 'umd.edu'
+external_nameservers:
+  - '128.8.74.2'
+  - '128.8.76.2'
 foreman_host: 'hepcms-foreman.umd.edu'
 foreman_repo_version: '1.8'
+internal_domain: 'local'
+internal_nameservers:
+  - '10.1.0.2'
 puppetmaster: 'hepcms-puppet.umd.edu'

@@ -57,9 +57,16 @@ foreman::oauth_consumer_secret: >
     GiBnEaRZmiY=]
 foreman_proxy::dhcp: true
 foreman_proxy::dns: true
+foreman_proxy::puppet_ssl_cert: "%{hiera('puppet::server_foreman_ssl_cert')}"
+foreman_proxy::puppet_ssl_key: "%{hiera('puppet::server_foreman_ssl_key')}"
 foreman_proxy::puppetca: true
 foreman_proxy::puppetrun: true
+foreman_proxy::ssl_cert: "%{hiera('puppet::server_foreman_ssl_cert')}"
+foreman_proxy::ssl_key: "%{hiera('puppet::server_foreman_ssl_key')}"
 foreman_proxy::tftp: true
+foreman_proxy::trusted_hosts:
+  - "%{hiera('puppetmaster')}"
+  - "%{hiera('foreman_host')}"
 mysql::server::root_password: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
     DQYJKoZIhvcNAQEBBQAEggEAR6dnXKd6EXMdMuRfL5ePYoCk+l/NgaWt0CTj
@@ -82,4 +89,6 @@ puppet::server_common_modules_path:
   - '/usr/share/puppet/modules'
 puppet::server_directory_environments: true
 puppet::server_environments: []
+puppet::server_foreman_ssl_cert: "/var/lib/puppet/ssl/certs/%{hiera('puppetmaster')}.pem"
+puppet::server_foreman_ssl_key: "/var/lib/puppet/ssl/private_keys/%{hiera('puppetmaster')}.pem"
 puppet::server_implementation: 'puppetserver'

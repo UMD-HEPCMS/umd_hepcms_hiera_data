@@ -31,8 +31,6 @@ foreman_proxy::puppetrun: false
 foreman_proxy::puppet_url: "https://%{hiera('puppetmaster')}:8140"
 foreman_proxy::ssl: true
 foreman_proxy::tftp: false
-foreman_proxy::trusted_hosts:
-  - "%{hiera('foreman_host')}"
 mysql::server::remove_default_accounts: true
 mysql::server::backup::backupcompress: true
 mysql::server::backup::backupdir: '/opt/mysql_backups'
