@@ -1,6 +1,28 @@
 ---
 classes:
   - role::foreman_all_in_one
+internal_ip: '10.1.0.2'
+dns_zones:
+  'local':
+    zonetype: 'master'
+    soa: 'hepcms-foreman.local'
+    soaip: "%{hiera('internal_ip')}"
+    reverse: false
+    ttl: '10800'
+    refresh: '86400'
+    update_retry: '3600'
+    expire: '604800'
+    negttl: '3600'
+  '1.10.in-addr.arpa':
+    zonetype: 'master'
+    soa: 'hepcms-foreman.local'
+    soaip: "%{hiera('internal_ip')}"
+    reverse: true
+    ttl: '10800'
+    refresh: '86400'
+    update_retry: '3600'
+    expire: '604800'
+    negttl: '3600'
 foreman::db_password: >
     ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
     DQYJKoZIhvcNAQEBBQAEggEAomtrFJolrFMMFCtgHk2eV7NwgUTkEBGIPng7
