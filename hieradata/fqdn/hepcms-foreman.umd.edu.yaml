@@ -64,6 +64,7 @@ foreman_proxy::puppetrun: true
 foreman_proxy::ssl_cert: "%{hiera('puppet::server_foreman_ssl_cert')}"
 foreman_proxy::ssl_key: "%{hiera('puppet::server_foreman_ssl_key')}"
 foreman_proxy::tftp: true
+foreman_proxy::tftp_servername: "%{hiera('internal_ip')}"
 foreman_proxy::trusted_hosts:
   - "%{hiera('puppetmaster')}"
   - "%{hiera('foreman_host')}"
