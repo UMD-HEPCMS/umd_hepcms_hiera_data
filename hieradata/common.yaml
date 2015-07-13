@@ -82,5 +82,4 @@ r10k::sources:
     remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_hiera_data'
 extra_packages:
   - 'emacs'
-  - 'nfs-utils'
-  - 'rpcbind'
+  - 'nano'
