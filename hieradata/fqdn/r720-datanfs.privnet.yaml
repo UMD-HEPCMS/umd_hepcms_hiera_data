@@ -3,4 +3,5 @@ extra_packages:
   - 'firefox'
   - 'xfsprogs'
   - 'xfsdump'
+firewall::ensure: 'stopped'`  
 
