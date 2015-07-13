@@ -80,3 +80,7 @@ r10k::sources:
   hiera:
     basedir: '/etc/puppet/hiera'
     remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_hiera_data'
+extra_packages:
+  - 'emacs'
+  - 'nfs-utils'
+  - 'rpcbind'
