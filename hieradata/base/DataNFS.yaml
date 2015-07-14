@@ -1,7 +1,5 @@
 ---
 firewall::ensure: 'stopped'
-nfs::manage_idmapd: true
-nfs::enable_idmapd: false
 nfs::server: true 
 nfs::exports:
    '/data':

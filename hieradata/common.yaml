@@ -52,7 +52,8 @@ mysql::server::backup::file_per_database: true
 mysql::server::backup::time:
   - '23'
   - '5'
-nfs::manage_idmapd: false
+nfs::manage_idmapd: true
+nfs::enable_idmapd: false
 # TODO : Possibly update to use UMD servers
 ntp::servers:
   - '0.centos.pool.ntp.org'

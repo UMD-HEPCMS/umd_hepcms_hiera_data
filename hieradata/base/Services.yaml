@@ -1,6 +1,4 @@
 ---
-nfs::manage_idmapd: true
-nfs::enable_idmapd: false
 nfs::manage_firewall: false
 nfs::nfs_mounts:
   home:
