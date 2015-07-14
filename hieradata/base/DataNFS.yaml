@@ -1,0 +1,11 @@
+---
+firewall::ensure: 'stopped'
+nfs::manage_idmapd: true
+nfs::enable_idmapd: false
+nfs::server: true 
+nfs::exports:
+   '/data':
+    - host: '10.0.0.0/255.0.0.0'
+      options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
+      order: 1 
+nfs::manage_firewall: false
