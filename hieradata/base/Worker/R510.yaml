@@ -5,6 +5,6 @@ nfs::enable_idmapd: false
 nfs::manage_firewall: false
 nfs::nfs_mounts:
   home:
-    device: '10.1.0.7:/data'
+    device: 'r720-datanfs.privnet:/data'
     path: '/data'
     options: 'rw,async,intr,nolock,nfsvers=3'
