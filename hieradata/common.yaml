@@ -54,6 +54,17 @@ mysql::server::backup::time:
   - '5'
 nfs::manage_idmapd: true
 nfs::enable_idmapd: false
+# in dedicated yaml do the following to not have the home and data mounts:
+# nfs::nfs_mounts: {}
+nfs::nfs_mounts:
+  home:
+    device: '10.1.0.1:/export/home'
+    path: '/home'
+    options: 'rw,async,intr,nolock,nfsvers=3'
+  data:
+    device: 'r720-datanfs.privnet:/data'
+    path: '/data'
+    options: 'rw,async,intr,nolock,nfsvers=3'
 # TODO : Possibly update to use UMD servers
 ntp::servers:
   - '0.centos.pool.ntp.org'

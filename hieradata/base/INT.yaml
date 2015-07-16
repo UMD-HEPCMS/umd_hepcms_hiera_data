@@ -1,7 +1,2 @@
 ---
 nfs::manage_firewall: false
-nfs::nfs_mounts:
-  home:
-    device: 'r720-datanfs.privnet:/data'
-    path: '/data'
-    options: 'rw,async,intr,nolock,nfsvers=3'

@@ -6,4 +6,9 @@ nfs::exports:
     - host: '10.0.0.0/255.0.0.0'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 1 
+nfs::nfs_mounts:
+  home:
+    device: '10.1.0.1:/export/home'
+    path: '/home'
+    options: 'rw,async,intr,nolock,nfsvers=3'      
 nfs::manage_firewall: false
