@@ -1,3 +1,7 @@
 ---
 firewall::ensure: 'stopped'
 nfs::manage_firewall: false
+extra_packages:
+  - 'freeipmi'
+  - 'OpenIPMI'
+  - 'srvadmin-idrac7'
