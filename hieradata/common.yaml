@@ -95,3 +95,5 @@ r10k::sources:
 extra_packages:
   - 'emacs'
   - 'nano'
+  - 'ypbind'
+  - 'yp-tools'
