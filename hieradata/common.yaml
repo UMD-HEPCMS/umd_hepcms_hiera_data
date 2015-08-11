@@ -101,4 +101,5 @@ extra_packages:
 #   public_interface: 'eth1'
 #   private_interface: 'eth0'
 ## package version specifics to use for all machines:
-facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
+facter::package_ensure: "2.4.4-1.el6"
+#facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
