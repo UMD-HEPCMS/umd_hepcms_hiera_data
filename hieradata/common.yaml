@@ -97,3 +97,6 @@ extra_packages:
   - 'nano'
   - 'ypbind'
   - 'yp-tools'
+hiera:
+   public_interface: 'eth1'
+   private_interface: 'eth0'
