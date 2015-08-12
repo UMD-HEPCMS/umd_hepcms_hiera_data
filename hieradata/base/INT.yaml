@@ -2,4 +2,5 @@
 nfs::manage_firewall: false
 extra_packages:
   - 'denyhosts'
-osg::cvmfs::http_proxies: `http://hepcms-squid:3128`
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid:3128'
