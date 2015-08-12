@@ -1,2 +1,4 @@
 ---
 nfs::manage_firewall: false
+extra_packages:
+  - 'denyhosts'
