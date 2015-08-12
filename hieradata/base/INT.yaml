@@ -3,6 +3,6 @@ nfs::manage_firewall: false
 extra_packages:
   - 'denyhosts'
 osg::cvmfs::http_proxies: 
-  - 'http://hepcms-squid:3128'
+  - 'http://hepcms-hn.umd.edu:3128'
 osg::cvmfs::repositories_real:
   - '`echo $(ls /cvmfs)|tr '' '' ,`'
