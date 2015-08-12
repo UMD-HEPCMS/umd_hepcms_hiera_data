@@ -4,3 +4,5 @@ extra_packages:
   - 'denyhosts'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid:3128'
+osg::cvmfs::repositories_real:
+  - '`echo $(ls /cvmfs)|tr ' ' ,`'
