@@ -1,5 +1,4 @@
 ---
-firewall::ensure: 'stopped'
 nfs::server: true 
 nfs::exports:
    '/data':
@@ -16,7 +15,20 @@ nfs::nfs_mounts:
     path: '/home'
     options: 'rw,async,intr,nolock,nfsvers=3'      
 nfs::manage_firewall: false
+# firewall::ensure: 'stopped'
 firewall::ensure: 'running'
+firewall_rules:
+  '001 allow ssh on internal network':
+    port: 22
+    proto: 'tcp'
+    source: '10.1.0.0/255.255.0.0'
+    iniface: "eth0"
+    action: 'accept'
+  '002 turn off ssh on public network':
+    port: 22
+    proto: 'tcp'
+    iniface: "eth1"
+    action: 'reject'
 extra_packages:
   - 'firefox'
   - 'xfsprogs'
