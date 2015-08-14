@@ -6,3 +6,5 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid.privnet:3128'
