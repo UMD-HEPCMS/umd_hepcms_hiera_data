@@ -103,3 +103,4 @@ extra_packages:
 ## package version specifics to use for all machines:
 facter::package_ensure: "2.4.4-1.el6"
 #facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
+selinux::mode: 'disabled'
