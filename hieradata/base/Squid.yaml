@@ -12,4 +12,4 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
-selinux::mode: 'disabled'
+selinux::config: 'disabled'
