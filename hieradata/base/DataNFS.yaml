@@ -30,9 +30,7 @@ nfs::manage_firewall: false
 # firewall::ensure: 'stopped'
 firewall::ensure: 'running'
 firewall_rules:
-  '001 allow ssh on internal network':
-    port: 22
-    proto: 'tcp'
+  '001 allow everything on internal network':
     source: '10.1.0.0/255.255.0.0'
     iniface: "em1"
     action: 'accept'
