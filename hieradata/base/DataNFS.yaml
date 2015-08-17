@@ -4,13 +4,14 @@ nfs::exports:
    '/data':
     - host: '10.1.0.0/16'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
-      order: 1
-    - host: '128.8.164.13'
-      options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
-      order: 2      
+      order: 1   
     - host: '128.8.164.12'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
-      order: 3         
+      order: 2
+   '/data/hadoop':
+    - host: '128.8.164.13'
+      options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
+      order: 2                  
 nfs::nfs_mounts:
   home:
     device: '10.1.0.1:/export/home'
