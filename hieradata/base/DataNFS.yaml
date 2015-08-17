@@ -41,10 +41,14 @@ firewall_rules:
     proto: 'tcp'
     iniface: "em2"
     action: 'reject'
-  '003 allow hepcms-* to connect for disk mount':
+  '003 allow hepcms-0 to connect for disk mount':
     iniface: "em2"
-    source: '128.8.164.0/255.255.255.0'
+    source: '128.8.164.12/255.255.255.0'
     action: 'accept'    
+  '003 allow hepcms-1 to connect for disk mount':
+    iniface: "em2"
+    source: '128.8.164.13/255.255.255.0'
+    action: 'accept'       
 extra_packages:
   - 'firefox'
   - 'xfsprogs'
