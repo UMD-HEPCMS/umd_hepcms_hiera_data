@@ -43,7 +43,7 @@ firewall_rules:
     action: 'reject'
   '003 allow hepcms-* to connect for disk mount':
     iniface: "em2"
-    source: '128.8.164.11-128.8.164.13/255.255.255.0'
+    source: '128.8.164.0/255.255.255.0'
     action: 'accept'    
 extra_packages:
   - 'firefox'
