@@ -9,10 +9,18 @@ nfs::exports:
     - host: '128.8.164.13/255.255.255.0'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 2
-   '/data':
+   '/data/users':
     - host: '128.8.164.12/255.255.255.0'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 3                  
+   '/data/groups':
+    - host: '128.8.164.12/255.255.255.0'
+      options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
+      order: 4 
+   '/data/osg':
+    - host: '128.8.164.12/255.255.255.0'
+      options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
+      order: 5        
 nfs::nfs_mounts:
   home:
     device: '10.1.0.1:/export/home'
@@ -30,11 +38,11 @@ firewall_rules:
     action: 'accept'
   '002 allow hepcms-1 to connect for disk mount':
     iniface: "em2"
-    source: '128.8.164.13/255.255.255.0'
+    source: '128.8.164.13'
     action: 'accept' 
   '003 allow hepcms-0 to connect for disk mount': 
     iniface: "em2"
-    source: '128.8.164.12/255.255.255.0'
+    source: '128.8.164.12'
     action: 'accept'      
   '004 turn off ssh on public network':
     port: 22
