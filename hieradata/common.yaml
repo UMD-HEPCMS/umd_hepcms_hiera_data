@@ -54,6 +54,8 @@ mysql::server::backup::time:
   - '5'
 nfs::manage_idmapd: true
 nfs::enable_idmapd: false
+# conflicts with nisclient
+nfs::manage_rpcbind: false
 # in dedicated yaml do the following to not have the home and data mounts:
 # nfs::nfs_mounts: {}
 nfs::nfs_mounts:
