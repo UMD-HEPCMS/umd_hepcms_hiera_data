@@ -13,5 +13,6 @@ extra_packages:
   - 'libXi'
   - 'tmux'
   - 'screen'
+  - 'xemacs'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
