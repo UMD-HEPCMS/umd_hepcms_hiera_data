@@ -15,3 +15,4 @@ extra_packages:
   - 'screen'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
+osg::cvmfs::user::disabled
