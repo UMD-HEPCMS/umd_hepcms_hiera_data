@@ -2,5 +2,19 @@
 nfs::manage_firewall: false
 extra_packages:
   - 'denyhosts'
+  - 'finger'
+  - 'firefox'
+  - 'xauth'
+  - 'freegut'
+  - 'freegut_devel'
+  - 'gv'
+  - 'tkinter'
+  - 'git-all'
+  - 'libXaw'
+  - 'Xaw3d'
+  - 'Xaw3d-devel'
+  - 'libXi'
+  - 'tmux'
+  - 'screen'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
