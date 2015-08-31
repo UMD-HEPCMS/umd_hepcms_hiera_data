@@ -5,11 +5,11 @@ nfs::exports:
     - host: '10.1.0.0/16'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 1   
-    - host: '128.8.164.12'
+    - host: '10.1.255.231'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 2
    '/data/hadoop':
-    - host: '128.8.164.13'
+    - host: '10.1.255.232'
       options: 'fsid=1,rw,async,no_subtree_check,no_root_squash'
       order: 3                 
 nfs::nfs_mounts:
