@@ -18,28 +18,28 @@ nfs::nfs_mounts:
     path: '/home'
     options: 'rw,async,intr,nolock,nfsvers=3'      
 nfs::manage_firewall: false
-# firewall::ensure: 'stopped'
-firewall::ensure: 'running'
-firewall_rules:
-  '001 allow everything on internal network':
-    source: '10.1.0.0/255.255.0.0'
-    iniface: "em1"
-    action: 'accept'
-  '002 allow hepcms-1 to connect for disk mount':
-    iniface: "em2"
-    source: '128.8.164.13'
-    action: 'accept' 
-    proto: 'all'    
-  '003 allow hepcms-0 to connect for disk mount': 
-    iniface: "em2"
-    source: '128.8.164.12'
-    action: 'accept'    
-    proto: 'all'      
-  '004 turn off ssh on public network':
-    port: 22
-    proto: 'tcp'
-    iniface: "em2"
-    action: 'reject'     
+firewall::ensure: 'stopped'
+# firewall::ensure: 'running'
+# firewall_rules:
+#   '001 allow everything on internal network':
+#     source: '10.1.0.0/255.255.0.0'
+#     iniface: "em1"
+#     action: 'accept'
+#   '002 allow hepcms-1 to connect for disk mount':
+#     iniface: "em2"
+#     source: '128.8.164.13'
+#     action: 'accept' 
+#     proto: 'all'    
+#   '003 allow hepcms-0 to connect for disk mount': 
+#     iniface: "em2"
+#     source: '128.8.164.12'
+#     action: 'accept'    
+#     proto: 'all'      
+#   '004 turn off ssh on public network':
+#     port: 22
+#     proto: 'tcp'
+#     iniface: "em2"
+#     action: 'reject'     
 extra_packages:
   - 'firefox'
   - 'xfsprogs'
