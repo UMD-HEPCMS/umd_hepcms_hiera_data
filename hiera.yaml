@@ -4,12 +4,12 @@
   - yaml
 :logger: console
 :hierarchy:
+  - "%{::osfamily}%{::operatingsystemmajrelease}"  
   - "fqdn/%{::fqdn}"
   - "%{::hostgroup}"
   - "virtual/%{::virtual}"
   - common
   - site
-  - "%{::osfamily}%{::operatingsystemmajrelease}"  
 :yaml:
    :datadir: "/etc/puppet/hiera/%{::environment}/hieradata"
 :eyaml:
