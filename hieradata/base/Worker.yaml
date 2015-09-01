@@ -2,8 +2,8 @@
 firewall::ensure: 'stopped'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
-# gcc::gcc_packages:
-#   - 'gcc'
-#   - 'gcc-c++'
-#   - 'gcc-java'
-#   - 'gcc-gnat'
+gcc::gcc_packages:
+   - 'gcc'
+   - 'gcc-c++'
+   - 'gcc-java'
+   - 'gcc-gnat'
