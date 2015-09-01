@@ -2,4 +2,4 @@
 firewall::ensure: 'stopped'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
-classes: gcc
+# classes: gcc
