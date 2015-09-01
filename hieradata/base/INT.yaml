@@ -17,8 +17,4 @@ extra_packages:
 #  - 'condor.x86_64'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
-gcc::gcc_packages:
-  - 'gcc'
-  - 'gcc-c++'
-  - 'gcc-java'
-  - 'gcc-gnat' 
+include gcc

@@ -9,6 +9,7 @@
   - "virtual/%{::virtual}"
   - common
   - site
+  - "%{::osfamily}%{::operatingsystemmajrelease}"  
 :yaml:
    :datadir: "/etc/puppet/hiera/%{::environment}/hieradata"
 :eyaml:

@@ -1,0 +1,5 @@
+gcc::gcc_packages:
+  - 'gcc'
+  - 'gcc-c++'
+  - 'gcc-java'
+  - 'gcc-gnat' 
