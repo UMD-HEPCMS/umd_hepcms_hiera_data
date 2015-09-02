@@ -47,3 +47,5 @@ extra_packages:
   - 'freeipmi'
   - 'srvadmin-idrac7'
   - 'OpenIPMI'
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid.privnet:3128'
