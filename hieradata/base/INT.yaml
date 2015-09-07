@@ -18,4 +18,6 @@ extra_packages:
 #  - 'condor.x86_64'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
+osg::cvmfs::cms_local_site:
+  - 'T3_US_UMD'
 # classes: gcc
