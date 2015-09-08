@@ -8,5 +8,4 @@ firewall_rules:
     action: 'reject'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
-# osg::cvmfs::cms_local_site:
-#   - 'T3_US_UMD'
+osg::cvmfs::cms_local_site: T3_US_UMD
