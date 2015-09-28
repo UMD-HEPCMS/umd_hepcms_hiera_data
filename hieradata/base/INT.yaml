@@ -19,4 +19,13 @@ extra_packages:
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
 osg::cvmfs::cms_local_site: T3_US_UMD
+firewall::ensure: 'running'
+firewall_rules:
+   '004 Condor ports open':
+     iniface: "em1"
+     dport: "9000:9999"
+     proto: "tcp"
+     action: 'accept' 
+# -A INPUT -m comment --comment "Condor ports open" -m state --state NEW -p tcp -m tcp --dport 9000:9999 -j ACCEPT
+
 # classes: gcc
