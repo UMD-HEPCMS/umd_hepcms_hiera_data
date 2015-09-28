@@ -22,7 +22,6 @@ osg::cvmfs::cms_local_site: T3_US_UMD
 firewall::ensure: 'running'
 firewall_rules:
    '004 Condor ports open':
-     iniface: "em1"
      dport: "9000:9999"
      proto: "tcp"
      action: 'accept' 
