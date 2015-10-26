@@ -12,3 +12,4 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
+firewall::ensure: 'stopped'    

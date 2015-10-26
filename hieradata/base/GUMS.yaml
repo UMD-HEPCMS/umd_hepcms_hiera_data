@@ -1,3 +1,4 @@
 ---
 nfs::manage_firewall: false
 selinux::mode: 'enforcing'
+firewall::ensure: 'stopped'

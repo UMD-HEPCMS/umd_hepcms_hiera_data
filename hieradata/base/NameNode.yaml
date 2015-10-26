@@ -5,3 +5,4 @@ yum_cron::yum_autoupdate_ensure: 'absent' # Completely removes yum-autoupdate fr
 yum_cron::service_ensure: 'stopped'
 yum_cron::service_enable: false
 yum_cron::service_autorestart: false
+firewall::ensure: 'stopped'
