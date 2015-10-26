@@ -1,15 +1,15 @@
 ---
 nfs::manage_firewall: false
-firewall_rules:
-  '001 allow ssh on internal network':
-    port: 22
-    proto: 'tcp'
-    source: '10.1.0.0/255.255.0.0'
-    iniface: "eth0"
-    action: 'accept'
-  '002 turn off ssh on public network':
-    port: 22
-    proto: 'tcp'
-    iniface: "eth1"
-    action: 'reject'
+# firewall_rules:
+#   '001 allow ssh on internal network':
+#     port: 22
+#     proto: 'tcp'
+#     source: '10.1.0.0/255.255.0.0'
+#     iniface: "eth0"
+#     action: 'accept'
+#   '002 turn off ssh on public network':
+#     port: 22
+#     proto: 'tcp'
+#     iniface: "eth1"
+#     action: 'reject'
 firewall::ensure: 'stopped'    
