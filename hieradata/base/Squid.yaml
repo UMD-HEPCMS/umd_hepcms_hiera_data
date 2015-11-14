@@ -12,4 +12,6 @@ nfs::manage_firewall: false
 #     proto: 'tcp'
 #     iniface: "eth1"
 #     action: 'reject'
-firewall::ensure: 'stopped'    
+# Osg::Squid/Firewall has its own settings so let that be handled there
+# since it seems to cause a conflict to turn it off.
+#firewall::ensure: 'stopped'    
