@@ -2,5 +2,4 @@
 nfs::manage_firewall: false
 selinux::mode: 'enforcing'
 #firewall::ensure: 'stopped'
-osg::gums::db_password: 
-  - 'secret'
+osg::gums::db_password: 'secret'
