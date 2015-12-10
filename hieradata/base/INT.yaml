@@ -15,6 +15,7 @@ extra_packages:
   - 'screen'
   - 'xemacs'
   - 'krb5-workstation'
+  - 'osg-pki-tools'
 #  - 'condor.x86_64'
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
