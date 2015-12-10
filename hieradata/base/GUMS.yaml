@@ -3,3 +3,7 @@ nfs::manage_firewall: false
 selinux::mode: 'enforcing'
 #firewall::ensure: 'stopped'
 osg::gums::db_password: 'secret'
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid.privnet:3128'
+osg::cvmfs::cms_local_site: T3_US_UMD
+osg::cvmfs::cache_base: '/scratch/cvmfs'
