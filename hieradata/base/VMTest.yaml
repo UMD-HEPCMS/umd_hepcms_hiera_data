@@ -31,3 +31,4 @@ firewall_rules:
 classes:
   - osg
   - profile::osg::hadoop_client
+  - osgclient
