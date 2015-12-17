@@ -6,3 +6,5 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
+classes: 
+  - profile::osg::hadoop_client    

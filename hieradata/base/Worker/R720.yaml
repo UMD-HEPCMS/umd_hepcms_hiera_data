@@ -8,3 +8,5 @@ extra_packages:
 osg::cvmfs::http_proxies: 
   - 'http://hepcms-squid.privnet:3128'
 osg::cvmfs::cms_local_site: T3_US_UMD
+classes: 
+  - profile::osg::hadoop_client

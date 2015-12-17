@@ -6,5 +6,5 @@ yum_cron::service_ensure: 'stopped'
 yum_cron::service_enable: false
 yum_cron::service_autorestart: false
 firewall::ensure: 'stopped'
-# extra_packages:
-#   - 'osg-se-hadoop-client'
+classes: 
+  - profile::osg::hadoop_client
