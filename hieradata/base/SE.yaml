@@ -7,4 +7,11 @@ firewall_rules:
     iniface: "eth1"
     action: 'reject'
 classes: 
-  - profile::osg::hadoop_client    
+  - profile::osg::hadoop_client  
+  - osg::cvmfs
+  - osg::cacerts
+  - osg::cacerts::updater  
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid.privnet:3128'
+osg::cvmfs::cms_local_site: T3_US_UMD
+osg::cvmfs::server_urls: []
