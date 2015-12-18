@@ -1,4 +1,17 @@
 ---
+# file mostly in alphabetical order
+#downgrade puppet, keep same as master (need puppet class)
+classes:
+  - puppet
+puppet::version: '3.7.5-1.el6'
+
+extra_packages:
+  - 'emacs'
+  - 'nano'
+## package version specifics to use for all machines (if SL7 ever, change like below):
+facter::package_ensure: "2.4.4-1.el6"
+#facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
+# foreman:  
 foreman::configure_epel_repo: false
 foreman::configure_scl_repo: false
 foreman::db_database: 'foreman'
@@ -94,17 +107,9 @@ r10k::sources:
   hiera:
     basedir: '/etc/puppet/hiera'
     remote: 'https://github.com/UMD-HEPCMS/umd_hepcms_hiera_data'
-extra_packages:
-  - 'emacs'
-  - 'nano'
 #hiera:
 #   public_interface: 'eth1'
 #   private_interface: 'eth0'
-## package version specifics to use for all machines:
-facter::package_ensure: "2.4.4-1.el6"
-#facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
 selinux::mode: 'disabled'
-#downgrade puppet, keep same as master (need puppet class)
-classes:
-  - puppet
-puppet::version: '3.7.5-1.el6'
+
+
