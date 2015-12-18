@@ -105,6 +105,6 @@ facter::package_ensure: "2.4.4-1.el6"
 #facter::package_ensure: "2.4.4-1.el%{::operatingsystemmajrelease}"
 selinux::mode: 'disabled'
 #downgrade puppet, keep same as master (need puppet class)
-#classes:
-#  - puppet
+classes:
+  - puppet
 puppet::version: '3.7.5-1.el6'
