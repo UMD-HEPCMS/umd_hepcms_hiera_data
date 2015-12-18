@@ -17,10 +17,6 @@ extra_packages:
   - 'krb5-workstation'
   - 'osg-pki-tools'
 #  - 'condor.x86_64'
-osg::cvmfs::http_proxies: 
-  - 'http://hepcms-squid.privnet:3128'
-osg::cvmfs::cms_local_site: T3_US_UMD
-osg::cvmfs::cache_base: '/scratch/cvmfs'
 firewall::ensure: 'running'
 firewall_rules:
    '004 Condor ports open':
@@ -30,4 +26,7 @@ firewall_rules:
 # -A INPUT -m comment --comment "Condor ports open" -m state --state NEW -p tcp -m tcp --dport 9000:9999 -j ACCEPT
 classes:
   - profile::osg::hadoop_client
+  - osg::cvmfs
+  - osg::cacerts
+  - osg::cacerts::updater    
 # classes: gcc
