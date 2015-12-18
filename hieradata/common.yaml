@@ -85,6 +85,18 @@ ntp::servers:
   - '0.centos.pool.ntp.org'
   - '1.centos.pool.ntp.org'
   - '2.centos.pool.ntp.org'
+# OSG settings which are common. If you want to use these classes, be sure they are 
+# added to classes above or in an individual .yaml
+# for cvmfs need:
+# classes: 
+#  - osg::cvmfs
+#  - osg::cacerts
+#  - osg::cacerts::updater  
+osg::cvmfs::http_proxies: 
+  - 'http://hepcms-squid.privnet:3128'
+osg::cvmfs::cms_local_site: T3_US_UMD
+osg::cvmfs::server_urls: []
+#
 puppet::agent: true
 puppet::classfile: '$statedir/classes.txt'
 puppet::cron_cmd: '/usr/bin/env puppet agent --config /etc/puppet/puppet.conf --onetime --no-daemonize --noop'
