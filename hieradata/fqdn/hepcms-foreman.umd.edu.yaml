@@ -3,9 +3,9 @@ classes:
   - role::foreman_all_in_one
 internal_ip: '10.1.0.2'
 dns_zones:
-  'local':
+  'privnet':
     zonetype: 'master'
-    soa: 'hepcms-foreman.local'
+    soa: 'hepcms-foreman.privnet'
     soaip: "%{hiera('internal_ip')}"
     reverse: false
     ttl: '10800'
@@ -15,7 +15,7 @@ dns_zones:
     negttl: '3600'
   '1.10.in-addr.arpa':
     zonetype: 'master'
-    soa: 'hepcms-foreman.local'
+    soa: 'hepcms-foreman.privnet'
     soaip: "%{hiera('internal_ip')}"
     reverse: true
     ttl: '10800'
@@ -80,9 +80,9 @@ mysql::server::root_password: >
     DLPtgCAwHfANeyO0pClJFLQQj1YrXkAk1FqgH+R/dXO67j7rMA==]
 puppet::dns_alt_names:
   - 'hepcms-puppet.umd.edu'
-  - 'hepcms-puppet.local'
+  - 'hepcms-puppet.privnet'
   - 'hepcms-foreman.umd.edu'
-  - 'hepcms-foreman.local'
+  - 'hepcms-foreman.privnet'
 puppet::server: true
 puppet::server_certname: "%{hiera('puppetmaster')}"
 puppet::server_common_modules_path:
