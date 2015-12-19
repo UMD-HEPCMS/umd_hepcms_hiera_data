@@ -6,8 +6,9 @@ firewall::ensure: 'stopped'
 #osg::gums::db_password: 'secret'
 classes: 
   - osg
+  - osg::cvmfs   
   - profile::osg::hadoop_client
   - osg::cacerts
   - osg::cacerts::updater    
 #  - osg::gums
-#    - osg::cvmfs  
+ 
