@@ -1,11 +1,12 @@
 ---
 nfs::manage_firewall: false
 selinux::mode: 'enforcing'
-#firewall::ensure: 'stopped'
+firewall::ensure: 'stopped'
 # need to encrypt this, set it locally for now
 #osg::gums::db_password: 'secret'
 classes: 
   - profile::osg::hadoop_client
-#   - osg::cvmfs
-#   - osg::cacerts
-#   - osg::cacerts::updater    
+  - osg::cacerts
+  - osg::cacerts::updater    
+  - osg::gums
+#    - osg::cvmfs  
