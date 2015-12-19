@@ -8,5 +8,5 @@ classes:
   - profile::osg::hadoop_client
   - osg::cacerts
   - osg::cacerts::updater    
-  - osg::gums
+#  - osg::gums
 #    - osg::cvmfs  
