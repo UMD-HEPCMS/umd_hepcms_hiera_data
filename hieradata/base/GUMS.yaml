@@ -5,6 +5,7 @@ firewall::ensure: 'stopped'
 # need to encrypt this, set it locally for now
 #osg::gums::db_password: 'secret'
 classes: 
+  - osg
   - profile::osg::hadoop_client
   - osg::cacerts
   - osg::cacerts::updater    
