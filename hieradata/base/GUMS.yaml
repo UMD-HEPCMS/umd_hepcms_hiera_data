@@ -11,4 +11,6 @@ classes:
   - osg::cacerts
   - osg::cacerts::updater    
 #  - osg::gums
+extra_packages:
+  - 'denyhosts'
  
