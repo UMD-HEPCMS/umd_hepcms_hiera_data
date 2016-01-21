@@ -17,6 +17,7 @@ extra_packages:
   - 'krb5-workstation'
   - 'osg-pki-tools'
 #  - 'condor.x86_64'
+#test
 firewall::ensure: 'running'
 firewall_rules:
    '004 Condor ports open':
