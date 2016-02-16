@@ -1,0 +1,2 @@
+---
+osg::cvmfs::cache_base: '/tmp/cvmfs/cache'
