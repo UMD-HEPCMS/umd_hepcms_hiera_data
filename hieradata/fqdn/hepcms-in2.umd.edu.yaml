@@ -1,3 +1,2 @@
 ---
 osg::cvmfs::cache_base: '/tmp/cvmfs/cache'
-osg::cvmfs::quota_limit: '40000'
