@@ -6,6 +6,31 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
+  '003 allow GRAM callback inbound':
+    port: GLOBUS_TCP_PORT_RANGE
+    proto: "tcp"
+    action: 'accept'
+  '004 allow GRAM callback outbound':
+    port: GLOBUS_TCP_SOURCE_RANGE
+    proto: "tcp"
+    action: 'accept'
+  '005 allow GridFTP inbound GLOBUS':
+    port: GLOBUS_TCP_SOURCE_RANGE
+    proto: "tcp"
+    action: 'accept'
+  '006 allow GridFTP inbound port':
+    port: 2811
+    proto: "tcp"
+    action: 'accept'
+  '007 allow SRM inbound 1':
+    port: 8080
+    proto: "tcp"
+    action: 'accept'
+  '008 allow SRM inbound 2':
+    port: 8443
+    proto: "tcp"
+    action: 'accept'
+
 classes: 
   - profile::osg::hadoop_client  
   - osg::cvmfs
