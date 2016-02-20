@@ -7,7 +7,7 @@ firewall_rules:
     iniface: "eth1"
     action: 'reject'
   '003 allow GRAM callback inbound':
-    port: GLOBUS_TCP_PORT_RANGE
+    port: [40000,40199]
     proto: "tcp"
     action: 'accept'
   '004 allow GRAM callback outbound':
@@ -35,4 +35,5 @@ classes:
   - profile::osg::hadoop_client  
   - osg::cvmfs
   - osg::cacerts
-  - osg::cacerts::updater  
+  - osg::cacerts::updater   
+  
