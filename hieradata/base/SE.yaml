@@ -7,7 +7,9 @@ firewall_rules:
     iniface: "eth1"
     action: 'reject'
   '003 allow GRAM callback inbound':
-    port: 40000-40199
+    dport: 
+		- 40000
+		- 40199
     proto: "tcp"
     action: 'accept'
   '004 allow GRAM callback outbound':
