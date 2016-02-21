@@ -11,11 +11,11 @@ firewall_rules:
     proto: "tcp"
     action: 'accept'
   '004 allow GRAM callback outbound':
-    sport: '20000-25000'`
+    sport: '20000-25000'
     proto: "tcp"
     action: 'accept'
   '005 allow GridFTP inbound GLOBUS':
-    dport: '20000-25000'`
+    dport: '20000-25000'
     proto: "tcp"
     action: 'accept'
   '006 allow GridFTP inbound port':
