@@ -2,34 +2,32 @@
 nfs::manage_firewall: false
 firewall_rules:
   '002 turn off ssh on public network':
-    port: 22
+    dport: 22
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
   '003 allow GRAM callback inbound':
-    dport: 
-		- 40000
-		- 40199
+    dport: '40000-40199'
     proto: "tcp"
     action: 'accept'
   '004 allow GRAM callback outbound':
-    port: GLOBUS_TCP_SOURCE_RANGE
+    sport: '20000-25000'`
     proto: "tcp"
     action: 'accept'
   '005 allow GridFTP inbound GLOBUS':
-    port: GLOBUS_TCP_SOURCE_RANGE
+    dport: '20000-25000'`
     proto: "tcp"
     action: 'accept'
   '006 allow GridFTP inbound port':
-    port: 2811
+    dport: 2811
     proto: "tcp"
     action: 'accept'
   '007 allow SRM inbound 1':
-    port: 8080
+    dport: 8080
     proto: "tcp"
     action: 'accept'
   '008 allow SRM inbound 2':
-    port: 8443
+    dport: 8443
     proto: "tcp"
     action: 'accept'
 
