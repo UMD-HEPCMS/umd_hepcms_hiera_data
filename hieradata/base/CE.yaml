@@ -6,6 +6,14 @@ firewall_rules:
     proto: 'tcp'
     iniface: "eth1"
     action: 'reject'
+  '003 HTCondor-CE port':
+    port: '9619'
+    proto: "tcp"
+    action: 'accept'
+  '004 HTCondor-CE shared_port daemon port':
+    port: '9620'
+    proto: "tcp"
+    action: 'accept'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
