@@ -14,6 +14,10 @@ firewall_rules:
     port: '9620'
     proto: "tcp"
     action: 'accept'
+  '005 GUMS Inbound TCP port':
+    port: '8443'
+    proto: "tcp"
+    action: 'accept'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
