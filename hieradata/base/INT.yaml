@@ -29,5 +29,6 @@ classes:
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater    
+  - osg::wn
 # classes: gcc
 osg::cvmfs::quota_limit: '40000'
