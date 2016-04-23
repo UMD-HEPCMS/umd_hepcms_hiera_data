@@ -14,6 +14,10 @@ firewall_rules:
     port: '9620'
     proto: "tcp"
     action: 'accept'
+  '005 Condor ports open':
+    dport: '9000-9999'
+    proto: "tcp"
+    action: 'accept'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
