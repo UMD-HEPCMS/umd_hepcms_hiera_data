@@ -33,6 +33,7 @@ firewall_rules:
 
 classes: 
   - profile::osg::hadoop_client  
+  - profile::osg::gridftp
   - osg::gridftp
   - osg::cvmfs
   - osg::cacerts
