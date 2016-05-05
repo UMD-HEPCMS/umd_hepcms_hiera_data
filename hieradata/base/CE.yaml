@@ -18,6 +18,10 @@ firewall_rules:
     dport: '9000-9999'
     proto: "tcp"
     action: 'accept'
+  '006 HTCondor-CE port SPORT':
+    sport: '9619'
+    proto: "tcp"
+    action: 'accept'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
