@@ -28,6 +28,7 @@ firewall_rules:
 classes:
   - osg
   - profile::osg::hadoop_client
+  - profile::interactive
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater  
