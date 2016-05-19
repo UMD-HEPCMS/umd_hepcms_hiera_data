@@ -24,6 +24,10 @@ firewall_rules:
     action: 'accept'
 classes: 
   - profile::osg::hadoop_client
+  - profile::osg::ce
+  - profile::osg::ce:install
+  - profile::osg::ce::configure
+  - profile::osg::ce:service
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater      
