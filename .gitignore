@@ -7,3 +7,4 @@ spec/fixtures/modules/
 .bundle/
 coverage/
 keys/
+*.yaml~
