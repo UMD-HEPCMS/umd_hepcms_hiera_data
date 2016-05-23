@@ -26,9 +26,9 @@ osg::osg_release: '3.3'
 classes: 
   - profile::osg::hadoop_client
   - profile::osg::ce
-  - profile::osg::ce::install
-  - profile::osg::ce::configure
-  - profile::osg::ce::service
+  - profile::ce::install
+  - profile::ce::configure
+  - profile::ce::service
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater      
