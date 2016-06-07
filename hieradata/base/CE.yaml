@@ -22,6 +22,10 @@ firewall_rules:
     sport: '9619'
     proto: "tcp"
     action: 'accept'
+  '007 allow GUMS inbound ':
+    dport: 8443
+    proto: "tcp"
+    action: 'accept'
 osg::osg_release: '3.3'
 classes: 
   - profile::osg::hadoop_client
