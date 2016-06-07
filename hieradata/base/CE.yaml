@@ -18,11 +18,19 @@ firewall_rules:
     dport: '9000-9999'
     proto: "tcp"
     action: 'accept'
-  '006 HTCondor-CE port SPORT':
+  '006 Condor sports open':
+    sport: '9000-9999'
+    proto: "tcp"
+    action: 'accept'
+  '007 HTCondor-CE port SPORT':
     sport: '9619'
     proto: "tcp"
     action: 'accept'
-  '007 allow GUMS inbound ':
+  '008 HTCondor-CE port DPORT':
+    dport: '9619'
+    proto: "tcp"
+    action: 'accept'  
+  '009 allow GUMS inbound ':
     dport: 8443
     proto: "tcp"
     action: 'accept'
