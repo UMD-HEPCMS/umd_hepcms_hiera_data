@@ -27,7 +27,7 @@ firewall_rules:
     proto: "tcp"
     action: 'accept'
   '008 HTCondor-CE port DPORT':
-    dport: '9619'
+    dport: '9618'
     proto: "tcp"
     action: 'accept'  
   '009 allow GUMS inbound ':
