@@ -30,10 +30,13 @@ firewall_rules:
     dport: 8443
     proto: "tcp"
     action: 'accept'
-
+osg::osg_release: '3.3'
 classes: 
   - profile::osg::hadoop_client  
   - profile::osg::gridftp
+  - profile::osg::gftp::install
+  - profile::osg::gftp::configure
+  - profile::osg::gftp::service
   - osg::gridftp
   - osg::cvmfs
   - osg::cacerts
