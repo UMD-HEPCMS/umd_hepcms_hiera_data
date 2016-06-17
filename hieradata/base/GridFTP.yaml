@@ -37,7 +37,6 @@ classes:
   - profile::osg::gftp::install
   - profile::osg::gftp::configure
   - profile::osg::gftp::service
-  - osg::gridftp
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater
