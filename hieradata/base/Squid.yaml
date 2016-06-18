@@ -1,6 +1,6 @@
 ---
 nfs::manage_firewall: false
-osg::osg_release: '3.3'
+#osg::osg_release: '3.3'
 # firewall_rules:
 #   '001 allow ssh on internal network':
 #     port: 22
