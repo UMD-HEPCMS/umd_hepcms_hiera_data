@@ -28,6 +28,7 @@ firewall_rules:
 # -A INPUT -m comment --comment "Condor ports open" -m state --state NEW -p tcp -m tcp --dport 9000:9999 -j ACCEPT
 classes:
   - osg
+  - profile::ganglia
   - profile::osg::hadoop_client
   - profile::interactive
   - profile::osg::ce
