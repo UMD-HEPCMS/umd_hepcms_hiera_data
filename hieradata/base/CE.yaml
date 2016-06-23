@@ -34,6 +34,14 @@ firewall_rules:
     dport: 8443
     proto: "tcp"
     action: 'accept'
+  '010 web open for RSV':
+    dport: 80
+    proto: "tcp"
+    action: 'accept' 
+  '011 web open for RSV':
+    sport: 80
+    proto: "tcp"
+    action: 'accept'          
 osg::osg_release: '3.3'
 classes: 
   - profile::osg::hadoop_client
