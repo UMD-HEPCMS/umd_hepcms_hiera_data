@@ -10,3 +10,6 @@ classes:
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater
+  - profile::osg::glexec::install
+  - profile::osg::glexec::configure
+  - profile::osg::glexec::service
