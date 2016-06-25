@@ -1,6 +1,10 @@
 ---
 firewall::ensure: 'stopped'
 nfs::manage_firewall: false
+extra_packages:
+  - 'freeipmi'
+  - 'OpenIPMI'
+  - 'srvadmin-idrac7'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
@@ -9,3 +13,6 @@ classes:
   - profile::osg::glexec::install
   - profile::osg::glexec::configure
   - profile::osg::glexec::service  
+  - profile::condor::worker::install
+  - profile::condor::worker::configure
+  - profile::condor::worker::services
