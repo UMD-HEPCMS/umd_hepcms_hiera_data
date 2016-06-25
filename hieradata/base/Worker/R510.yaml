@@ -1,6 +1,10 @@
 ---
 firewall::ensure: 'stopped'
 nfs::manage_firewall: false
+extra_packages:
+  - 'freeipmi'
+  - 'OpenIPMI'
+  - 'srvadmin-idrac7'
 classes: 
   - profile::osg::hadoop_client
   - osg::cvmfs
