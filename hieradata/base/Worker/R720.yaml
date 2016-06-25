@@ -13,3 +13,6 @@ classes:
   - profile::osg::glexec::install
   - profile::osg::glexec::configure
   - profile::osg::glexec::service
+  - profile::condor::worker::install
+  - profile::condor::worker::configure
+  - profile::condor::worker::services
