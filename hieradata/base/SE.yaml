@@ -39,7 +39,6 @@ cron::job { 'bestman2 restart every Saturday 1:15am':
   weekday     => '6',
   user        => 'root',
   command     => '/sbin/service bestman2 restart >/dev/null 2>&1',
-  environment => ['PATH="/sbin:/usr/sbin:/usr/bin:/bin"', ],
 }
 classes: 
   - profile::osg::hadoop_client  
