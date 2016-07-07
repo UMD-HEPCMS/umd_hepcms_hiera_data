@@ -36,7 +36,7 @@ classes:
   - profile::test
   - profile::osg::cvmfs::user
   - profile::osg::cvmfs::service
-  - profile::osg::cvmfs::install
+  #- profile::osg::cvmfs::install
   - profile::osg::cvmfs::config
   #- osg::cvmfs
   - osg::cacerts
