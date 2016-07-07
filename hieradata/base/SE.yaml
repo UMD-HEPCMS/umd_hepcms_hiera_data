@@ -45,4 +45,4 @@ classes:
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater   
-  - cron
+  - cron::job
