@@ -34,6 +34,10 @@ classes:
   - profile::osg::ce
   - profile::osg::cefiles::install
   - profile::test
-  - osg::cvmfs
+  - profile::osg::cvmfs::user
+  - profile::osg::cvmfs::service
+  - profile::osg::cvmfs::install
+  - profile::osg::cvmfs::config
+  #- osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater  
