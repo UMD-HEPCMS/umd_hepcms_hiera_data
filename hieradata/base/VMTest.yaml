@@ -33,6 +33,7 @@ classes:
   - profile::interactive
   - profile::osg::ce
   - profile::osg::cefiles::install
+  - profile::test
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater  
