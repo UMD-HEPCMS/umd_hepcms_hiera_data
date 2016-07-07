@@ -31,6 +31,15 @@ firewall_rules:
     proto: "tcp"
     action: 'accept'
 osg::osg_release: '3.3'
+cron::job: 
+  bestman2: 
+  minute:'15',
+  hour:'1',
+  date:'*',
+  month:'*',
+  weekday:'6',
+  user:'root',
+  command:'/sbin/service bestman2 restart >/dev/null 2>&1'
 classes: 
   - profile::osg::hadoop_client  
   - osg::cvmfs
