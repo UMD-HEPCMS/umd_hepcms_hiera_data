@@ -31,7 +31,8 @@ firewall_rules:
     proto: "tcp"
     action: 'accept'
 osg::osg_release: '3.3'
-cron::job:: 
+cron::job::
+  service: 
   minute:'15'
   hour:'1'
   date:'*'
