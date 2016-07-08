@@ -54,4 +54,7 @@ classes:
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater   
-  - cron
+  - profile::osg::sefiles::install
+  - profile::osg::sefiles::configure
+  - profile::osg::sefiles::service  
+###  - cron
