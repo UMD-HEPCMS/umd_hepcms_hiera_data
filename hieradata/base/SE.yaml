@@ -30,6 +30,14 @@ firewall_rules:
     dport: 8443
     proto: "tcp"
     action: 'accept'
+  '009 allow xrootd inbound':
+    dport: 1094
+    proto: "tcp"
+    action: 'accept'
+  '010 allow xrootd outbound':
+    sport: 1094
+    proto: "tcp"
+    action: 'accept'    
 osg::osg_release: '3.3'
 cron::jobs:
  service: 
