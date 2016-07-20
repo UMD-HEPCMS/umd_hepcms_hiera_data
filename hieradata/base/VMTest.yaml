@@ -38,6 +38,6 @@ classes:
   #- profile::osg::cvmfs::service
   #- profile::osg::cvmfs::install
  # - profile::osg::cvmfs::config
-  #- osg::cvmfs
+  - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater  
