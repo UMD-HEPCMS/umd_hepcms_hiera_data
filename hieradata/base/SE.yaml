@@ -56,5 +56,7 @@ classes:
   - osg::cacerts::updater   
   - profile::osg::sefiles::install
   - profile::osg::sefiles::configure
-  - profile::osg::sefiles::service  
+  - profile::osg::sefiles::service 
+### test sudoers changes  
+  - profile::test   
 ###  - cron
