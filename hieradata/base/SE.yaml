@@ -57,6 +57,6 @@ classes:
   - profile::osg::sefiles::install
   - profile::osg::sefiles::configure
   - profile::osg::sefiles::service 
-### test sudoers changes  
   - profile::test   
+### test sudoers changes  
 ###  - cron
