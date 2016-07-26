@@ -33,5 +33,6 @@ classes:
   - osg::cacerts
   - osg::cacerts::updater    
   - osg::wn
+  - profile::ganglia
 # classes: gcc
 osg::cvmfs::quota_limit: '40000'
