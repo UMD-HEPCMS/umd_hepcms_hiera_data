@@ -8,3 +8,4 @@ yum_cron::service_autorestart: false
 firewall::ensure: 'stopped'
 classes: 
   - profile::osg::hadoop_client
+osg::osg_release: '3.3'
