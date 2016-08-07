@@ -9,7 +9,8 @@ classes:
 #  - osg::cvmfs   
 #  - profile::osg::hadoop_client
   - osg::cacerts
-  - osg::cacerts::updater    
+  - osg::cacerts::updater  
+  - profile::ganglia    
 #  - osg::gums
 extra_packages:
   - 'denyhosts'

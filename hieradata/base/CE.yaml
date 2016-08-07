@@ -51,4 +51,5 @@ classes:
   - profile::osg::cefiles::service
   - osg::cvmfs
   - osg::cacerts
-  - osg::cacerts::updater      
+  - osg::cacerts::updater  
+  - profile::ganglia    
