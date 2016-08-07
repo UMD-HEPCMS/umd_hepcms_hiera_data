@@ -1,0 +1,88 @@
+---
+classes:
+  - puppet
+  - epel
+  - omsa
+  
+puppet::version: '3.7.5-1.el6'
+## a lot of stuff from common.yaml
+nfs::manage_firewall: false 
+facter::package_ensure: "2.4.4-1.el6"
+# foreman:  
+foreman::configure_epel_repo: false
+foreman::configure_scl_repo: false
+foreman::db_database: 'foreman'
+foreman::db_manage: true
+foreman::db_type: 'mysql'
+foreman::db_username: 'foreman'
+foreman::foreman_url: "https://%{hiera('foreman_host')}"
+foreman::locations_enabled: false
+foreman::oauth_active: true
+foreman::oauth_map_users: false
+foreman::organizations_enabled: false
+foreman::repo: "%{hiera('foreman_repo_version')}"
+foreman::ssl: true
+foreman::unattended: true
+foreman_proxy::bmc: false
+foreman_proxy::bmc_default_provider: 'freeipmi'
+foreman_proxy::dhcp: false
+foreman_proxy::dhcp_managed: false
+foreman_proxy::dns: false
+foreman_proxy::dns_managed: false
+foreman_proxy::foreman_base_url: "https://%{hiera('foreman_host')}"
+foreman_proxy::manage_sudoersd: false
+foreman_proxy::register_in_foreman: false
+foreman_proxy::repo: "%{hiera('foreman_repo_version')}"
+foreman_proxy::puppetca: false
+foreman_proxy::puppetrun: false
+#TODO Uncomment next 2 items if mcollective is used
+#foreman_proxy::puppetrun_provider: 'mcollective'
+#foreman_proxy::puppet_user: 'foreman-proxy'
+foreman_proxy::puppet_url: "https://%{hiera('puppetmaster')}:8140"
+foreman_proxy::ssl: true
+foreman_proxy::tftp: false
+mysql::server::remove_default_accounts: true
+mysql::server::backup::backupcompress: true
+mysql::server::backup::backupdir: '/opt/mysql_backups'
+mysql::server::backup::backuppassword: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAeUEtav7+LStK6MdPkF8q0Fi8CH/eSoZRJ85U
+    TqfaKsahXHjLhe2Xd8qY/ZfuijDV80ndQ0ffdq/pllAPVajtdhzDKAYXUCNl
+    Qn/y5ts8010vK0ijHhYQ6GRI+slYASHQJ2xub7WEK+ug7zfpMlMyrFoOVWBJ
+    F5dlFsXtouromckj/7XVlWCZGhmnUhmimLtqjjSiSF5lZ4t8AO0/sqEJFNXw
+    Cdir+ubRen0ibVKGgXt/vq3K6MuUNza4t1I16andZY3yXCp5C5z8NlUv0pkf
+    GhNfaqma83S8+vNzvujSWJIo2ItFvFA6FlcS9BujtAkE0pGtcDVUjYCd63iC
+    PB2a/TBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD2dqdsGbrnD0RzR25w
+    uH3tgCChNodGWT1KJ+IbdkkdHPJfsfi0lf/A0yE0HfMQmg+7Hw==]
+mysql::server::backup::backuprotate: 7
+mysql::server::backup::backupuser: 'backup-user'
+mysql::server::backup::delete_before_dump: true
+mysql::server::backup::ensure: present
+mysql::server::backup::file_per_database: true
+mysql::server::backup::time:
+  - '23'
+  - '5'
+ntp::servers:
+  - '0.centos.pool.ntp.org'
+  - '1.centos.pool.ntp.org'
+  - '2.centos.pool.ntp.org'
+nfs::manage_idmapd: true
+nfs::enable_idmapd: false
+# conflicts with nisclient
+nfs::manage_rpcbind: false
+# in dedicated yaml do the following to not have the home and data mounts:
+# nfs::nfs_mounts: {}
+nfs::nfs_mounts:
+  home:
+    device: '10.1.0.1:/export/home'
+    path: '/home'
+    options: 'rw,async,intr,nolock,nfsvers=3'
+  data:
+    device: 'r720-datanfs.privnet:/data'
+    path: '/data'
+    options: 'rw,async,intr,nolock,nfsvers=3'
+extra_packages:
+  - 'denyhosts'
+  - 'emacs'
+  - 'nano'   
+      
