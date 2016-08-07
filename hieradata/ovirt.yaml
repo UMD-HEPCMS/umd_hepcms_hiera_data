@@ -85,4 +85,4 @@ extra_packages:
   - 'denyhosts'
   - 'emacs'
   - 'nano'   
-      
+include profile::ovirt::configure
