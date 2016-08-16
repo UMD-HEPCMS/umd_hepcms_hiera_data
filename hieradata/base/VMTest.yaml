@@ -41,3 +41,6 @@ classes:
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater  
+  - datanode::services
+  - datanode::install
+  - datanode::configure
