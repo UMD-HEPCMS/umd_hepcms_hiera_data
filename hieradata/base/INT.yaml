@@ -17,6 +17,7 @@ extra_packages:
   - 'krb5-workstation'
   - 'osg-pki-tools'
   - 'expat-devel'
+  - 'python-pip'
 #  - 'condor.x86_64'
 firewall::ensure: 'running'
 firewall_rules:
