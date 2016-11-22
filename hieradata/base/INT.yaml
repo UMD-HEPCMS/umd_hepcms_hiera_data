@@ -38,7 +38,7 @@ classes:
   - osg::cacerts::updater    
   - osg::wn
   - profile::ganglia
-  - profile::test
+  - profile::run_omreport
  
 # classes: gcc
 osg::cvmfs::quota_limit: '40000'
