@@ -37,6 +37,7 @@ classes:
   - profile::osg::gftp::configure
   - profile::osg::gftp::service
   - profile::ganglia
+  - profile::run_omreport
   - osg::cvmfs
   - osg::cacerts
   - osg::cacerts::updater
