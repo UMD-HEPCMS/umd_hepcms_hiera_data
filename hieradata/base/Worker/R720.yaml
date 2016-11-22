@@ -17,7 +17,7 @@ classes:
   - profile::condor::worker::configure
   - profile::condor::worker::services
   - profile::ganglia
-  - profile::run_ompreport
+  - profile::run_omreport
   - datanode::services
   - datanode::install
   - datanode::configure
