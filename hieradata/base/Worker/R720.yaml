@@ -20,5 +20,5 @@ classes:
   - profile::run_omreport
   - datanode::services
   - datanode::install
-  - datanode::configure
+ # - datanode::configure
 osg::osg_release: '3.3'
