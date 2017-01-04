@@ -18,7 +18,7 @@ classes:
   - profile::condor::worker::services
   - profile::ganglia
   - profile::run_omreport
-  - datanode::services
-  - datanode::install
+  #- datanode::services
+  #- datanode::install
  # - datanode::configure
 osg::osg_release: '3.3'
