@@ -9,7 +9,7 @@ firewall_rules:
      iniface: "eth0"
      action: 'accept'
    '002 turn off ssh on public network':
-     port: 22
+     dport: 22
      proto: 'tcp'
      iniface: "eth2"
      action: 'reject'
