@@ -11,7 +11,7 @@ firewall_rules:
    '002 turn off ssh on public network':
      port: 22
      proto: 'tcp'
-     iniface: "eth1"
+     iniface: "eth2"
      action: 'reject'
 # Osg::Squid/Firewall has its own settings so let that be handled there
 # since it seems to cause a conflict to turn it off.
