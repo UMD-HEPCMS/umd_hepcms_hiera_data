@@ -25,12 +25,12 @@ firewall_rules:
      source: '188.185.0.0/17'
      iniface: "eth2"
      action: 'accept'
-    '005 allow squid monitoring':
-      sport: 3401
-      proto: 'udp'
-      source: '188.184.128.0/17'
-      iniface: "eth2"
-      action: 'accept'
+   '005 allow squid monitoring':
+     sport: 3401
+     proto: 'udp'
+     source: '188.184.128.0/17'
+     iniface: "eth2"
+     action: 'accept'
 # Osg::Squid/Firewall has its own settings so let that be handled there
 # since it seems to cause a conflict to turn it off.
 #firewall::ensure: 'stopped'    
