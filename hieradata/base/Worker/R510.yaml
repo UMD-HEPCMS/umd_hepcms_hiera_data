@@ -18,4 +18,5 @@ classes:
   - profile::condor::worker::services
   - profile::ganglia
   - profile::run_omreport
+  - profile::coretempreport
 osg::osg_release: '3.3'
